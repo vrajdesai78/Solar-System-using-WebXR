@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Solar 3D Scene</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+      <a-entity position="0 0 0" particle-system="preset: dust; particleCount: 10000"></a-entity>
+        <a-entity scale="0.15 0.15 0.15">
+        <a-sphere position="0 12 -10" radius="5.25" 
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing:linear"
+                  material="src: https://cdn.glitch.com/4cfbcd0a-1382-44f1-b55c-1f16f20ea425%2Fmaterial_1_baseColor.jpg?v=1624106708644" shadow></a-sphere>
+        <a-entity rotation="0 0 0" position="0 12 -10" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing:linear">
+            <a-sphere position="8.25 0 0" radius="1.25" 
+                      animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing:linear"
+                      material="src: https://cdn.glitch.com/4cfbcd0a-1382-44f1-b55c-1f16f20ea425%2F8081_earthmap2k.jpg?v=1624107209665" shadow>          </a-sphere>
+        </a-entity>
+        <a-sky material = "src: https://cdn.glitch.com/4cfbcd0a-1382-44f1-b55c-1f16f20ea425%2FSolarsystemscope_texture_8k_stars_milky_way.jpg?v=1624110041528"></a-sky>
+      </a-entity>
+    </a-scene>
+</body>
+
+</html>
